@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <>
-      <h1>Dynamic Tic-Tac-Toe</h1>
+      <h1>DiDaDoe Test</h1>
       <img src={Pic} alt="DiDaDoe Logo" className="logo" />
       <div className="buttons-container">
         <Link to="/play-local">
