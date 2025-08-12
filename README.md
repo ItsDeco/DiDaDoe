@@ -39,7 +39,12 @@ A modern twist on classic Tic-Tac-Toe where players can only have 3 pieces on th
 - Play against friends remotely
 - Real-time synchronization
 
-## 6. Author
+## 6. To-Do List
+- Add Number of moves against the unbeatable bot (Saved with localstorage() )
+- Begin doing back-end with node.js implementing multiplayer
+- Make it usable with mobile platforms
+
+## 7. Author
 
 **Made by ItsDeco** - [GitHub](https://github.com/ItsDeco)
 
