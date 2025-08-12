@@ -43,4 +43,8 @@ A modern twist on classic Tic-Tac-Toe where players can only have 3 pieces on th
 
 **Made by ItsDeco** - [GitHub](https://github.com/ItsDeco)
 
+<<<<<<< HEAD
 - Inspired by classic Tic-Tac-Toe with a modern twist
+=======
+- Inspired by classic Tic-Tac-Toe with a modern twist
+>>>>>>> 13b3b142cacf556b83db0d6be1f5305cb4a293f8
