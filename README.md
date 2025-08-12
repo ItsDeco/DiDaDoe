@@ -1,17 +1,46 @@
-<<<<<<< HEAD
-# React + Vite
+# DiDaDoe - Dynamic Tic-Tac-Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern twist on classic Tic-Tac-Toe where players can only have 3 pieces on the board at once!
 
-Currently, two official plugins are available:
+## 1. Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Local Multiplayer** - Play with a friend on the same device
+- **Unbeatable Bot** - Challenge yourself against a minimax AI
+- **3-Piece Limit Rule** - Old pieces disappear when you place your 4th piece
 
-## Expanding the ESLint configuration
+## 2. How to Play
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# DiDaDoe
-Welcome to Di-Da-Doe, a dynamic version of Tic-Tac-Toe
->>>>>>> f1a3d888edfcaab1332597badbd12c6689793815
+1. Players take turns placing X's and O's on the board
+2. Get 3 pieces in a row (horizontal, vertical, or diagonal) to win
+3. **Unique Rule**: When you place your 4th piece, your oldest piece automatically disappears!
+4. This creates dynamic gameplay where the board constantly evolves
+
+## 3. Demo
+
+[Live Demo](https://your-deployed-url.com)
+
+## 4. Built With
+
+- **React** - Frontend framework
+- **Vite** - Build tool and dev server
+- **CSS3** - Styling and animations
+- **JavaScript ES6+** - Game logic and AI
+
+## 5. Game Modes
+
+### Local Multiplayer
+- Two players share the same device
+
+### vs Unbeatable Bot
+- AI opponent using minimax algorithm with alpha-beta pruning
+- Adapts to the 3-piece limit rule
+
+### Online Multiplayer *(Coming Soon)*
+- Play against friends remotely
+- Real-time synchronization
+
+## 6. Author
+
+**Made by ItsDeco** - [GitHub](https://github.com/ItsDeco)
+
+- Inspired by classic Tic-Tac-Toe with a modern twist
