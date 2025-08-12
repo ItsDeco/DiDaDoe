@@ -177,45 +177,364 @@
   width: 300px;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .game-container {
+    padding: 1rem;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .game-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+  
   .game-layout {
+    gap: 2rem;
+    width: 100%;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
   }
   
   .left-controls {
-    order: 1;
-    min-width: auto;
+    position: fixed;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .status {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    max-width: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
   }
   
   .board-container {
-    order: 2;
+    position: relative;
+    margin-top: 3rem;
   }
   
-  .reset-button {
-    position: static;
-    order: 3;
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
   .board-image {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 320px;
   }
-
+  
   .board-overlay {
     padding: 6%;
   }
+  
+  .reset-button {
+    position: absolute;
+    top: -25px;
+    right: -80px;
+    width: 55px;
+    height: 55px;
+  }
+  
+  .reset-button svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .game-controls {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+    margin: 0;
+    z-index: 100;
+  }
+  
+  .back-button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+  }
+  
+  .player-mark {
+    width: 65%;
+    height: 65%;
+  }
+}
 
+
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
   .game-container h1 {
     font-size: 2rem;
+    top: 1rem;
+  }
+  
+  .board-image {
+    width: 350px;
+    height: 280px;
+  }
+  
+  .left-controls {
+    bottom: 4rem;
+  }
+  
+  .game-controls {
+    bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 834px) and (orientation: portrait) {
+  .board-image {
+    width: 450px;
+    height: 360px;
+  }
+  
+  .reset-button {
+    right: -90px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .status {
+    font-size: 1.2rem;
+    padding: 14px 28px;
+  }
+  
+  .back-button {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .app h1 {
+    font-size: 2rem;
+  }
+  
+  .logo {
+    width: 180px;
+    margin: 15px 0;
+  }
+  
+  .buttons-container {
+    max-width: 260px;
+    gap: 0.8rem;
+  }
+  
+  .game-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  .github-button {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    left: 15px;
+  }
+  
+  .github-button svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .rules-text-button {
+    bottom: 15px;
+    right: 15px;
+    font-size: 14px;
+    padding: 8px 12px;
   }
 
+  .game-container {
+    padding: 0.25rem;
+    max-height: 200vh;
+    overflow: hidden; 
+    justify-content: center;
+    position: relative;
+  }
+  
+  .game-container h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: -1rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .game-layout {
+    gap: 0.5rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+  }
+
+  .left-controls {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+  }
+  
   .status {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .board-container {
+    position: static;
+    margin-top: 0.5rem;
+  }
+  
+  .board-image {
+    width: 320px;
+    height: 275px;
+  }
+  
+  .board-overlay {
+    position: absolute;
+    top: 0;
+    width: 102%;
+    height: 105%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    padding: 35% 12%;
+    box-sizing: border-box;
+  }
+
+  .invisible-square {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  
+  .reset-button {
+    position: absolute;
+    top: 370px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .reset-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .game-controls {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0;
+    z-index: 100;
+  }
+  
+  .back-button {
+    width: 100%;
     font-size: 1rem;
-    padding: 10px 16px;
+    padding: 0.5rem 1rem;
+  }
+  
+  
+  .player-mark {
+    width: 35%;
+    height: 35%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+  }
+}
+
+@media (max-width: 390px){
+  .board-overlay {
+    position: absolute;
+    top: 0;
+    width: 98%;
+    height: 105%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    padding: 20% 10%;
+    box-sizing: border-box;
+  }
+  .player-mark {
+    width: 35%;
+    height: 35%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+  }
+
+  .game-container h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: -1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .reset-button {
+    position: absolute;
+    top: 290px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 370px){
+    .reset-button {
+    position: absolute;
+    top: 320px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
