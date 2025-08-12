@@ -7,7 +7,6 @@ import PlayOnline from './components/Online'
 
 function App() {
   return (
-    <Router>
       <div className="app">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +15,6 @@ function App() {
           <Route path="/play-online" element={<PlayOnline />} />
         </Routes>
       </div>
-    </Router>
   )
 }
 
