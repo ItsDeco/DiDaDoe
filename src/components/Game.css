@@ -338,7 +338,8 @@ html, body {
 
 @media (max-width: 480px) {
   .app {
-    margin: 0;
+    top: 0px;
+    margin-top: 0;
     padding: 0;
     overflow-x: hidden;
     width: 100%;
