@@ -7,9 +7,25 @@ function PlayBot() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [currentPlayer, setCurrentPlayer] = useState('X')
   const [winner, setWinner] = useState(null)
+  const [currentTurns, setCurrentTurns] = useState(0)
+  const [bestTurns, setBestTurns] = useState(0)
   
   const [xMoves, setXMoves] = useState([])
   const [oMoves, setOMoves] = useState([])
+
+  useEffect(() => {
+    const savedBestTurns = localStorage.getItem('didadoe-best-turns')
+    if (savedBestTurns) {
+      setBestTurns(parseInt(savedBestTurns))
+    }
+  }, [])
+
+  useEffect(() => {
+    if (winner && currentTurns > bestTurns) {
+      setBestTurns(currentTurns)
+      localStorage.setItem('didadoe-best-turns', currentTurns.toString())
+    }
+  }, [winner, currentTurns, bestTurns])
 
   const checkWinner = (squares) => {
     const lines = [
@@ -136,7 +152,7 @@ function PlayBot() {
     
     setXMoves(newXMoves)
     setBoard(newBoard)
-    
+
     const gameWinner = checkWinner(newBoard)
     if (gameWinner) {
       setWinner(gameWinner)
@@ -163,7 +179,8 @@ function PlayBot() {
         
         setOMoves(newOMoves)
         setBoard(newBoard)
-        
+        setCurrentTurns(prev => prev + 1)
+
         const gameWinner = checkWinner(newBoard)
         if (gameWinner) {
           setWinner(gameWinner)
@@ -180,6 +197,7 @@ function PlayBot() {
     setBoard(Array(9).fill(null))
     setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X')
     setWinner(null)
+    setCurrentTurns(0)
     setXMoves([])
     setOMoves([])
   }
@@ -196,12 +214,16 @@ function PlayBot() {
     </button>
   )
 
+
   return (
     <div className="game-container">
       <h1>Player vs Bot</h1>
       
       <div className="game-layout">
         <div className="left-controls">
+            <h2 className="status">
+              Best Game: {bestTurns} Turns
+            </h2>
             {winner ? (
               <h2 className="status winner">
                 {winner === 'X' ? 'Crosses Win!' : 'Circles Win!'}
