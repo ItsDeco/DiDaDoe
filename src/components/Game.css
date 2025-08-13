@@ -380,7 +380,8 @@ html, body {
     max-height: 200vh;
     height: 100vh;
     height: 100dvh;
-    overflow: hidden; 
+    overflow: hidden;
+    gap: 1.5rem; 
     justify-content: center;
     position: fixed;
   }
@@ -396,12 +397,12 @@ html, body {
   }
   
   .game-layout {
-    gap: 0.5rem;
+    gap: 3rem;
     width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 50vh;
+    min-height: 0vh;
   }
 
   .left-controls {
@@ -409,7 +410,6 @@ html, body {
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -542,7 +542,7 @@ html, body {
 }
 
 @media (max-width: 370px){
-    .reset-button {
+  .reset-button {
     position: absolute;
     top: 320px;
     right: 10px;
