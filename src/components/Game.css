@@ -337,6 +337,11 @@ html, body {
 
 
 @media (max-width: 480px) {
+  .app {
+    position: fixed;
+    overflow: hidden; 
+  }
+
   .app h1 {
     font-size: 2rem;
   }

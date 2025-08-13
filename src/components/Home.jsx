@@ -23,9 +23,8 @@ function Home() {
         <Link to="/play-online">
           <button className="game-button">Play Online</button>
         </Link>
-          <button className="rules-text-button" onClick={openRulesModal}>How to play</button>
       </div>
-      
+      <button className="rules-text-button" onClick={openRulesModal}>How to play</button>
       <button 
         className="github-button"
         onClick={() => window.open('https://github.com/ItsDeco/DiDaDoe', '_blank')}
