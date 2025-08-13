@@ -340,6 +340,8 @@ html, body {
   .app {
     position: fixed;
     overflow: hidden; 
+    max-height: 200vh;
+    height: 100dvh;
   }
 
   .app h1 {
@@ -383,7 +385,6 @@ html, body {
   .game-container {
     padding: 0.25rem;
     max-height: 200vh;
-    height: 100vh;
     height: 100dvh;
     overflow: hidden; 
     justify-content: center;
