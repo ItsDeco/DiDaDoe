@@ -340,8 +340,8 @@ html, body {
   .app {
     position: fixed;
     overflow: hidden; 
-    max-height: 200vh;
-    height: 100dvh;
+    max-height: 300vh;
+    height: 200dvh;
   }
 
   .app h1 {
