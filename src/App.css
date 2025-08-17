@@ -133,11 +133,18 @@ html, body {
 }
 
 
-@media(max-width: 400px){
- .app h1{
+@media(max-width: 420px){
+  .app{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .app h1{
   font-size: 1.8rem;
   margin: 0.5rem 0;
- }
+  }
  
    .game-button {
     font-size: 0.95rem;
