@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import RulesModal from './RulesModal'
+import OnlineModal from './OnlineModal'
 import Pic from '../assets/didadoe.png'
 
 function Home() {
   const [isRulesModalOpen, setIsRulesModalOpen] = useState(false)
+  const [isOnlineModalOpen, setIsOnlineModalOpen] = useState(false)
 
   const openRulesModal = () => setIsRulesModalOpen(true)
   const closeRulesModal = () => setIsRulesModalOpen(false)
+
+  const openOnlineModal = () => setIsOnlineModalOpen(true)
+  const closeOnlineModal = () => setIsOnlineModalOpen(false)
 
   return (
     <>
@@ -20,9 +25,9 @@ function Home() {
         <Link to="/play-bot">
           <button className="game-button">Unbeatable Bot</button>
         </Link>
-        <Link to="/play-online">
-          <button className="game-button">Play Online</button>
-        </Link>
+        <button className="game-button" onClick={openOnlineModal}>
+          Play Online
+        </button>
       </div>
       <button className="rules-text-button" onClick={openRulesModal}>How to play</button>
       <button 
@@ -35,6 +40,7 @@ function Home() {
       </button>
 
       <RulesModal isOpen={isRulesModalOpen} onClose={closeRulesModal} />
+      <OnlineModal isOpen={isOnlineModalOpen} onClose={closeOnlineModal} />
     </>
   )
 }
