@@ -96,6 +96,7 @@ function PlayLocal() {
       <h1>Local Multiplayer</h1>
       
       <div className="game-layout">
+
         <div className="left-controls">
             {winner ? (
               <h2 className="status winner">
@@ -110,22 +111,23 @@ function PlayLocal() {
           </Link>
         </div>
 
+        <button className="reset-button" onClick={resetGame} title="New Game">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+          </svg>
+        </button>
+
         <div className="board-container">
-          <img src={boardImage} alt="Tic Tac Toe Board" className="board-image" />
-          
-          <div className="board-overlay">
+          <div className="board-board">
+            <div className="horizontal-line-1"></div>
+            <div className="horizontal-line-2"></div>
             {Array(9).fill(null).map((_, index) => renderSquare(index))}
           </div>
 
-
-          <button className="reset-button" onClick={resetGame} title="New Game">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
-            </svg>
-          </button>
-
         </div>
+
       </div>
+
     </div>  
   )
 }
