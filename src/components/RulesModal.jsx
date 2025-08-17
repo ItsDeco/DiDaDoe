@@ -12,7 +12,7 @@ function RulesModal({ isOpen, onClose }) {
         </div>
         <div className="modal-body">
           <p>The game works exactly like TicTacToe does!</p>
-          <p>Only difference is that you only get 3 moves at a time.</p>
+          <p>Only difference is that you only get 3 moves at a time, after the fourth move is played, your oldest move will delete itself, being replaced by the newest one.</p>
           <p>Try to keep up and don't lose track of your opponent moves.</p>
           <p>Good luck!</p>
           <button className="game-button" onClick={onClose}>Close</button>
