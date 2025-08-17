@@ -134,12 +134,6 @@ html, body {
 
 
 @media(max-width: 420px){
-  .app{
-    position: fixed;
-    height: 75vh;
-    width: 100%;
-  }
-
   .app h1{
   font-size: 1.8rem;
   margin: 0.5rem 0;
