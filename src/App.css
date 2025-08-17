@@ -131,3 +131,40 @@ html, body {
   width: 28px;
   height: 28px;
 }
+
+
+@media(max-width: 400px){
+ .app h1{
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+ }
+ 
+   .game-button {
+    font-size: 0.95rem;
+    padding: 0.55rem 1.2rem;
+  }
+  
+  .github-button {
+    width: 40px;
+    height: 40px;
+    bottom: 12px;
+    left: 12px;
+  }
+  
+  .github-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .rules-text-button {
+    bottom: 12px;
+    right: 12px;
+    font-size: 17px;
+    padding: 6px 10px;
+  }
+
+  .buttons-container{
+    max-width: 240px;
+    gap: 0.75rem;
+  }
+}

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './Game.css'
-import boardImage from '../assets/didadoeBoard.png'
 
 function PlayBot() {
   const [board, setBoard] = useState(Array(9).fill(null))
